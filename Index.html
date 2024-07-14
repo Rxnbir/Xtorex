@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XTROE - Your App Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+            animation: changeColor 5s infinite alternate;
+        }
+
+        @keyframes changeColor {
+            0% { color: #fff; }
+            50% { color: #f00; } /* Red color */
+            100% { color: #fff; }
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        .app-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .app-card {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 12px; /* Rounded edges */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .app-card h2 {
+            font-size: 2rem; /* Larger font size */
+            margin-bottom: 0.5rem;
+            color: #000; /* Black font color */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Beautiful font */
+        }
+
+        .app-card p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .rating-stars {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: #ffd700; /* gold */
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: transparent;
+            color: #000; /* Black text */
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border: 2px solid #000; /* Black border */
+            border-radius: 12px; /* Rounded edges */
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .download-btn:hover {
+            background-color: #000;
+            color: #fff; /* White text on hover */
+        }
+
+        .about-developer {
+            background-color: #444;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 12px; /* Rounded edges */
+            margin-top: 2rem;
+        }
+
+        .about-developer h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-developer p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 0.5rem; /* Added margin */
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background-color: transparent;
+            color: #fff;
+            padding: 0.3rem 1rem; /* Reduced padding */
+            text-decoration: none;
+            border: 2px solid #fff; /* White border */
+            border-radius: 12px; /* Rounded edges */
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .contact-btn:hover {
+            background-color: #fff;
+            color: #000; /* Black text on hover */
+        }
+
+        .share-section {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .share-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .share-buttons a {
+            display: inline-block;
+            background-color: transparent;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border: 2px solid #fff; /* White border */
+            border-radius: 12px; /* Rounded edges */
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+        }
+
+        .share-buttons a:hover {
+            background-color: #fff;
+            color: #000; /* Black text on hover */
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">XTROE</div>
+    </header>
+
+    <main>
+        <section class="app-list">
+            <!-- Example App Card - Nfow -->
+            <div class="app-card">
+                <h2>Nfow</h2>
+                <div class="rating-stars">
+                    <span>4.5 ★★★★☆</span> <!-- Example rating text -->
+                </div>
+                <p>Discover a shopping app for all your needs.</p>
+                <a href="https://shorturl.at/FC68U" class="download-btn" download>Download Now</a>
+            </div>
+        </section>
+
+        <section class="about-developer">
+            <h3>About Jack</h3>
+            <p>The Nfow app is developed by Jack. For inquiries, please contact Jack via <a href="mailto:Iamjackpapa@gmail.com" class="contact-btn">Email</a>.</p>
+        </section>
+
+        <section class="share-section">
+            <h3>Share XTROE with your friends</h3>
+            <div class="share-buttons">
+                <a href="whatsapp://send?text=Check out XTROE - Your App Store: https://example.com" target="_blank">WhatsApp</a>
+                <a href="sms:?body=Check out XTROE - Your App Store: https://example.com" target="_blank">SMS</a>
+                <a href="mailto:?subject=Check out XTROE - Your App Store&body=Hey, I found this cool app store: https://example.com" target="_blank">Email</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://example.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com/intent/tweet?url=https://example.com&text=Check out XTROE - Your App Store" target="_blank">Twitter</a>
+                <!-- Add more social media buttons as needed -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 XTROE. All rights reserved.</p>
+    </footer>
+</body>
+</html>
